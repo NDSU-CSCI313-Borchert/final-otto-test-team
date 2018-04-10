@@ -2,7 +2,7 @@ from game.level_manager import *
 from game.title_screen import *
 
 import pygame
-import game.constants
+import game.constants as constants
  
 # Initialize Pygame
 pygame.init()
