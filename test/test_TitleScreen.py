@@ -3,11 +3,13 @@ from unittest.mock import Mock
 
 import unittest
 
-from title_screen import TitleScreen
-from level_manager import LevelManager
+from .context import game
+
+from game.title_screen import TitleScreen
+from game.level_manager import LevelManager
 
 class test_TitleScreen(unittest.TestCase):
-    @patch('title_screen.pygame') # Needed to build the TitleScreen object
+    @patch('game.title_screen.pygame') # Needed to build the TitleScreen object
     def test_TitleScreen_draws_something(self, mock_pygame):
         ts = TitleScreen()
         
@@ -21,7 +23,7 @@ class test_TitleScreen(unittest.TestCase):
         self.assertTrue(mock_screen.blit.called, "Did not display text or an image on the screen!")
 
 
-    @patch('title_screen.pygame') # Needed to build the TitleScreen object
+    @patch('game.title_screen.pygame') # Needed to build the TitleScreen object
     def test_TitleScreen_unloads_level_on_esc_keypress(self, mock_pygame):
         ts = TitleScreen()
 

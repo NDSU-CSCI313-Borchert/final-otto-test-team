@@ -1,8 +1,8 @@
-from level_manager import *
-from title_screen import *
+from game.level_manager import *
+from game.title_screen import *
 
 import pygame
-import constants
+import game.constants
  
 # Initialize Pygame
 pygame.init()

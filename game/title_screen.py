@@ -1,9 +1,9 @@
 import pygame
-import constants
+import game.constants as constants
 
-from screen import *
-from level_manager import *
-from game_screen import *
+from game.screen import *
+from game.level_manager import *
+from game.game_screen import *
 
 class TitleScreen(Screen):
     def __init__(self):
